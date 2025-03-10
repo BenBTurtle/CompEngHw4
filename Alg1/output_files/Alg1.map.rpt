@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Alg1
-Mon Mar 10 13:39:33 2025
+Mon Mar 10 16:58:36 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -14,12 +14,13 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: Top-level Entity: |Alg1
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 12. Parameter Settings for User Entity Instance: mul1:mult
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +47,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 10 13:39:33 2025          ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 10 16:58:36 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; Alg1                                           ;
 ; Top-level Entity Name              ; Alg1                                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 0                                              ;
-;     Total combinational functions  ; 0                                              ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 97                                             ;
+; Total logic elements               ; 65                                             ;
+;     Total combinational functions  ; 33                                             ;
+;     Dedicated logic registers      ; 48                                             ;
+; Total registers                    ; 48                                             ;
+; Total pins                         ; 59                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -156,126 +157,81 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 32          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
-; Alg1.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
+; Alg1.v                           ; yes             ; User Verilog HDL File  ; C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v                          ;         ;
+; hexSevenSegmentDisplayDecoder.v  ; yes             ; User Verilog HDL File  ; C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 97    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 97    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 65        ;
+;                                             ;           ;
+; Total combinational functions               ; 33        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 16        ;
+;     -- 3 input functions                    ; 8         ;
+;     -- <=2 input functions                  ; 9         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 19        ;
+;     -- arithmetic mode                      ; 14        ;
+;                                             ;           ;
+; Total registers                             ; 48        ;
+;     -- Dedicated logic registers            ; 48        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 59        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 48        ;
+; Total fan-out                               ; 354       ;
+; Average fan-out                             ; 1.78      ;
++---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |Alg1                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 97   ; 0            ; 0          ; |Alg1               ; Alg1        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name             ; Entity Name            ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+------------------------+--------------+
+; |Alg1                          ; 33 (0)              ; 48 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 59   ; 0            ; 0          ; |Alg1                           ; Alg1                   ; work         ;
+;    |hexSevenSegmentDecoder:h2| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg1|hexSevenSegmentDecoder:h2 ; hexSevenSegmentDecoder ; work         ;
+;    |hexSevenSegmentDecoder:h3| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg1|hexSevenSegmentDecoder:h3 ; hexSevenSegmentDecoder ; work         ;
+;    |mul1:mult|                 ; 19 (19)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg1|mul1:mult                 ; mul1                   ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; s[1..31]                               ; Merged with s[0]                       ;
-; s[0]                                   ; Stuck at GND due to stuck port data_in ;
-; result[0]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[1]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[2]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[3]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[4]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[5]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[6]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[7]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[8]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[9]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[10]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[11]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[12]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[13]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[14]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[15]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[16]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[17]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[18]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[19]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[20]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[21]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[22]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[23]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[24]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[25]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[26]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[27]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[28]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[29]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[30]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; result[31]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; b[0..31]                               ; Lost fanout                            ;
-; Total Number of Removed Registers = 96 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                     ;
-+---------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                                              ;
-+---------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
-; s[0]          ; Stuck at GND              ; result[0]~reg0, result[1]~reg0, result[2]~reg0, result[3]~reg0, result[4]~reg0,                                     ;
-;               ; due to stuck port data_in ; result[5]~reg0, result[6]~reg0, result[7]~reg0, result[8]~reg0, result[9]~reg0,                                     ;
-;               ;                           ; result[10]~reg0, result[11]~reg0, result[12]~reg0, result[13]~reg0, result[14]~reg0,                                ;
-;               ;                           ; result[15]~reg0, result[16]~reg0, result[17]~reg0, result[18]~reg0, result[19]~reg0,                                ;
-;               ;                           ; result[20]~reg0, result[21]~reg0, result[22]~reg0, result[23]~reg0, result[24]~reg0,                                ;
-;               ;                           ; result[25]~reg0, result[26]~reg0, result[27]~reg0, result[28]~reg0, result[29]~reg0,                                ;
-;               ;                           ; result[30]~reg0, result[31]~reg0, b[23], b[24], b[25], b[26], b[27], b[28], b[29], b[30], b[31]                     ;
-; b[18]         ; Lost Fanouts              ; b[17], b[16], b[15], b[14], b[13], b[12], b[11], b[10], b[9], b[8], b[7], b[6], b[5], b[4], b[3], b[2], b[1], b[0], ;
-;               ;                           ; b[19], b[20], b[21], b[22]                                                                                          ;
-+---------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; mul1:mult|result[8..15]               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -283,14 +239,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 48    ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alg1|mul1:mult|s[0]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alg1|mul1:mult|b[0]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -298,8 +264,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+---------------------------------------------+
 ; Parameter Name ; Value ; Type                                        ;
 +----------------+-------+---------------------------------------------+
-; size           ; 32    ; Signed Integer                              ;
+; size           ; 8     ; Signed Integer                              ;
 +----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul1:mult ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; size           ; 8     ; Signed Integer                ;
++----------------+-------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -308,13 +284,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 97                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 59                          ;
+; cycloneiii_ff         ; 48                          ;
+;     ENA               ; 32                          ;
+;     ENA SCLR          ; 8                           ;
+;     ENA SLD           ; 8                           ;
+; cycloneiii_lcell_comb ; 37                          ;
+;     arith             ; 14                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 23                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -333,125 +320,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Mar 10 13:39:29 2025
+    Info: Processing started: Mon Mar 10 16:58:29 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alg1 -c Alg1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 32 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file alg1.v
-    Info (12023): Found entity 1: Alg1 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 1
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file alg1.v
+    Info (12023): Found entity 1: Alg1 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 1
+    Info (12023): Found entity 2: mul1 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file hexsevensegmentdisplaydecoder.v
+    Info (12023): Found entity 1: hexSevenSegmentDecoder File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v Line: 1
 Info (12127): Elaborating entity "Alg1" for the top level hierarchy
-Warning (10855): Verilog HDL warning at Alg1.v(10): initial value for variable a should be constant File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 10
-Warning (10855): Verilog HDL warning at Alg1.v(10): initial value for variable b should be constant File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 10
-Warning (10030): Net "a" at Alg1.v(8) has no driver or initial value, using a default initial value '0' File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 8
+Info (12128): Elaborating entity "mul1" for hierarchy "mul1:mult" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 24
+Warning (10230): Verilog HDL assignment warning at Alg1.v(56): truncated value with size 32 to match size of target (8) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 56
+Info (12128): Elaborating entity "hexSevenSegmentDecoder" for hierarchy "hexSevenSegmentDecoder:h0" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 26
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[0]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[1]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[2]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[3]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[4]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[5]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[6]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[7]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[8]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[9]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[10]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[11]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[12]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[13]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[14]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[15]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[16]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[17]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[18]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[19]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[20]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[21]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[22]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[23]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[24]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[25]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[26]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[27]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[28]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[29]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[30]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-    Warning (13410): Pin "result[31]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 16
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "result[7]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "result[6]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "result[5]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "result[4]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "result[3]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "result[2]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "result[1]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "result[0]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 3
+    Warning (13410): Pin "disp0[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp1[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[0]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[1]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[2]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[3]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[4]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[5]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[6]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp2[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[0]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[1]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[2]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[3]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[4]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[5]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[6]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+    Warning (13410): Pin "disp3[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 4
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 65 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 1
-    Warning (15610): No output dependent on input pin "aIn[0]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[1]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[2]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[3]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[4]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[5]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[6]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[7]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[8]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[9]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[10]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[11]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[12]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[13]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[14]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[15]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[16]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[17]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[18]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[19]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[20]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[21]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[22]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[23]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[24]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[25]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[26]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[27]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[28]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[29]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[30]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "aIn[31]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[0]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[1]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[2]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[3]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[4]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[5]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[6]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[7]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[8]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[9]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[10]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[11]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[12]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[13]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[14]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[15]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[16]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[17]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[18]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[19]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[20]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[21]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[22]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[23]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[24]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[25]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[26]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[27]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[28]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[29]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[30]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-    Warning (15610): No output dependent on input pin "bIn[31]" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
-Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 65 input pins
-    Info (21059): Implemented 32 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
-    Info: Peak virtual memory: 4740 megabytes
-    Info: Processing ended: Mon Mar 10 13:39:33 2025
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:10
+Info (21057): Implemented 124 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Mon Mar 10 16:58:36 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 
