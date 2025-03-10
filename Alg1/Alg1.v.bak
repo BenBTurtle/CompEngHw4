@@ -1,0 +1,7 @@
+module Alg1(input [31:0] A,B, //32 bit inputs and outputs for testing
+output [31:0] result);
+
+initial begin
+	reg [31:0] S = 0;
+
+endmodule
