@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Mar 10 16:58:44 2025
+Fitter Status : Successful - Mon Mar 10 18:21:19 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Alg1
 Top-level Entity Name : Alg1
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 60 / 49,760 ( < 1 % )
-    Total combinational functions : 34 / 49,760 ( < 1 % )
+Total logic elements : 65 / 49,760 ( < 1 % )
+    Total combinational functions : 36 / 49,760 ( < 1 % )
     Dedicated logic registers : 48 / 49,760 ( < 1 % )
 Total registers : 48
-Total pins : 59 / 360 ( 16 % )
+Total pins : 60 / 360 ( 17 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

@@ -1,22 +1,10 @@
 |Alg1
 clk => clk.IN1
 load => load.IN1
-aOrb => b.OUTPUTSELECT
-aOrb => b.OUTPUTSELECT
-aOrb => b.OUTPUTSELECT
-aOrb => b.OUTPUTSELECT
-aOrb => b.OUTPUTSELECT
-aOrb => b.OUTPUTSELECT
-aOrb => b.OUTPUTSELECT
-aOrb => b.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
-aOrb => a.OUTPUTSELECT
+aOrb => b.IN0
+aOrb => a.IN0
+set => b.IN1
+set => a.IN1
 currIn[0] => a.DATAB
 currIn[0] => b.DATAB
 currIn[1] => a.DATAB
