@@ -1,12 +1,11 @@
 module mul1 (input clk, load,
-input [size-1:0] aIn, bIn, //32 bit inputs and outputs for testing
-output reg [(size*2)-1:0] result);
+input [7:0] aIn, bIn, //32 bit inputs and outputs for testing
+output reg [15:0] result);
 
-parameter size = 8;// change this to the width of the operation in bits
 
-reg [size-1:0] s;
-reg [size-1:0] a;
-reg [size-1:0] b;
+reg [7:0] s;
+reg [7:0] a;
+reg [7:0] b;
 initial begin //set initial state
 	s = 8'd0;
 	a = 8'd0;
@@ -30,3 +29,4 @@ always @(posedge clk) begin //posedge to prevent clock related computation error
 end
 
 endmodule
+
