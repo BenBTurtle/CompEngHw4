@@ -1,11 +1,11 @@
 module Alg1(input clk, load, aOrb, set, //load runs the multiplier and set is there for setting values
 input [7:0] currIn, //32 bit inputs and outputs for testing
-output [0:15] result,
+output [15:0] result,
 output [7:0] disp0, disp1, disp2, disp3);
 
 
-reg [7:0] a;
-reg [7:0] b;
+reg [15:0] a;
+reg [15:0] b;
 
 initial begin
 	a = 0;
@@ -22,10 +22,10 @@ end
 
 mul1 mult(.clk(clk), .load(load), .aIn(a), .bIn(b), .result(result));
 
-hexSevenSegmentDecoder h0(result[0:3],disp3);
-hexSevenSegmentDecoder h1(result[4:7],disp2);
-hexSevenSegmentDecoder h2(result[8:11],disp1);
-hexSevenSegmentDecoder h3(result[12:15],disp0);
+hexSevenSegmentDecoder h0(result[3:0],disp0);
+hexSevenSegmentDecoder h1(result[7:4],disp1);
+hexSevenSegmentDecoder h2(result[11:8],disp2);
+hexSevenSegmentDecoder h3(result[15:12],disp3);
 
 endmodule
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Alg2
-Mon Mar 10 18:30:32 2025
+Tue Mar 11 17:01:59 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -14,11 +14,11 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |Alg2
- 13. Parameter Settings for User Entity Instance: mul2:mult
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "mul2:mult"
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
@@ -48,15 +48,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 10 18:30:32 2025          ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 11 17:01:59 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; Alg2                                           ;
 ; Top-level Entity Name              ; Alg2                                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 86                                             ;
-;     Total combinational functions  ; 62                                             ;
-;     Dedicated logic registers      ; 56                                             ;
-; Total registers                    ; 56                                             ;
+; Total logic elements               ; 141                                            ;
+;     Total combinational functions  ; 109                                            ;
+;     Dedicated logic registers      ; 88                                             ;
+; Total registers                    ; 88                                             ;
 ; Total pins                         ; 60                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -186,20 +186,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 86        ;
+; Estimated Total logic elements              ; 141       ;
 ;                                             ;           ;
-; Total combinational functions               ; 62        ;
+; Total combinational functions               ; 109       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 21        ;
-;     -- 3 input functions                    ; 21        ;
-;     -- <=2 input functions                  ; 20        ;
+;     -- 4 input functions                    ; 33        ;
+;     -- 3 input functions                    ; 31        ;
+;     -- <=2 input functions                  ; 45        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 48        ;
-;     -- arithmetic mode                      ; 14        ;
+;     -- normal mode                          ; 79        ;
+;     -- arithmetic mode                      ; 30        ;
 ;                                             ;           ;
-; Total registers                             ; 56        ;
-;     -- Dedicated logic registers            ; 56        ;
+; Total registers                             ; 88        ;
+;     -- Dedicated logic registers            ; 88        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 60        ;
@@ -207,9 +207,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 56        ;
-; Total fan-out                               ; 444       ;
-; Average fan-out                             ; 1.87      ;
+; Maximum fan-out                             ; 88        ;
+; Total fan-out                               ; 697       ;
+; Average fan-out                             ; 2.20      ;
 +---------------------------------------------+-----------+
 
 
@@ -218,10 +218,12 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name             ; Entity Name            ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+------------------------+--------------+
-; |Alg2                          ; 62 (2)              ; 56 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 60   ; 0            ; 0          ; |Alg2                           ; Alg2                   ; work         ;
+; |Alg2                          ; 109 (2)             ; 88 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 60   ; 0            ; 0          ; |Alg2                           ; Alg2                   ; work         ;
+;    |hexSevenSegmentDecoder:h0| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg2|hexSevenSegmentDecoder:h0 ; hexSevenSegmentDecoder ; work         ;
+;    |hexSevenSegmentDecoder:h1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg2|hexSevenSegmentDecoder:h1 ; hexSevenSegmentDecoder ; work         ;
 ;    |hexSevenSegmentDecoder:h2| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg2|hexSevenSegmentDecoder:h2 ; hexSevenSegmentDecoder ; work         ;
 ;    |hexSevenSegmentDecoder:h3| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg2|hexSevenSegmentDecoder:h3 ; hexSevenSegmentDecoder ; work         ;
-;    |mul2:mult|                 ; 46 (46)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg2|mul2:mult                 ; mul2                   ; work         ;
+;    |mul2:mult|                 ; 79 (79)             ; 72 (72)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Alg2|mul2:mult                 ; mul2                   ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -231,9 +233,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; mul2:mult|result[8..15]               ; Stuck at GND due to stuck port data_in ;
+; mul2:mult|b[8..15]                    ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 8 ;                                        ;
 +---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                        ;
++-----------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name   ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++-----------------+---------------------------+--------------------------------------------------------------------------------------+
+; mul2:mult|b[15] ; Stuck at GND              ; mul2:mult|b[14], mul2:mult|b[13], mul2:mult|b[12], mul2:mult|b[11], mul2:mult|b[10], ;
+;                 ; due to stuck port data_in ; mul2:mult|b[9], mul2:mult|b[8]                                                       ;
++-----------------+---------------------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -241,12 +253,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 56    ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Total registers                              ; 88    ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Clock Enable       ; 87    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -256,7 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; mul2:mult|c[3]                         ; 3       ;
+; mul2:mult|c[3]                         ; 2       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -266,31 +278,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alg2|mul2:mult|s[0]       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Alg2|mul2:mult|a[0]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Alg2|mul2:mult|c[2]       ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |Alg2|mul2:mult|a[7]       ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |Alg2|mul2:mult|c[6]       ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |Alg2|mul2:mult|b[5]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Alg2|mul2:mult|s[0]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |Alg2 ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; size           ; 8     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mul2:mult ;
-+----------------+-------+-------------------------------+
-; Parameter Name ; Value ; Type                          ;
-+----------------+-------+-------------------------------+
-; size           ; 8     ; Signed Integer                ;
-+----------------+-------+-------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mul2:mult"                                                                                                                                                                       ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; aIn  ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; bIn  ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -299,24 +301,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 60                          ;
-; cycloneiii_ff         ; 56                          ;
-;     ENA               ; 46                          ;
-;     ENA SCLR          ; 8                           ;
-;     SLD               ; 1                           ;
+; cycloneiii_ff         ; 88                          ;
+;     ENA               ; 71                          ;
+;     ENA SCLR          ; 16                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 66                          ;
-;     arith             ; 14                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 7                           ;
-;     normal            ; 52                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 21                          ;
+; cycloneiii_lcell_comb ; 114                         ;
+;     arith             ; 30                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 84                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 33                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.50                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 1.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -335,58 +336,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Mar 10 18:30:24 2025
+    Info: Processing started: Tue Mar 11 17:01:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alg2 -c Alg2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file alg2.v
+Info (12021): Found 2 design units, including 2 entities, in source file alg2.v
     Info (12023): Found entity 1: Alg2 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 1
+    Info (12023): Found entity 2: algorithmTB File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file multiplyalg2.v
     Info (12023): Found entity 1: mul2 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/multiplyAlg2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hexsevensegmentdisplaydecoder.v
     Info (12023): Found entity 1: hexSevenSegmentDecoder File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/hexSevenSegmentDisplayDecoder.v Line: 1
 Info (12127): Elaborating entity "Alg2" for the top level hierarchy
-Info (12128): Elaborating entity "mul2" for hierarchy "mul2:mult" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 24
-Warning (10230): Verilog HDL assignment warning at multiplyAlg2.v(26): truncated value with size 32 to match size of target (8) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/multiplyAlg2.v Line: 26
-Info (12128): Elaborating entity "hexSevenSegmentDecoder" for hierarchy "hexSevenSegmentDecoder:h0" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 26
+Info (12128): Elaborating entity "mul2" for hierarchy "mul2:mult" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 23
+Warning (10230): Verilog HDL assignment warning at multiplyAlg2.v(31): truncated value with size 32 to match size of target (16) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/multiplyAlg2.v Line: 31
+Info (12128): Elaborating entity "hexSevenSegmentDecoder" for hierarchy "hexSevenSegmentDecoder:h0" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 25
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[7]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
-    Warning (13410): Pin "result[6]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
-    Warning (13410): Pin "result[5]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
-    Warning (13410): Pin "result[4]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
-    Warning (13410): Pin "result[3]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
-    Warning (13410): Pin "result[2]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
-    Warning (13410): Pin "result[1]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
-    Warning (13410): Pin "result[0]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 3
     Warning (13410): Pin "disp0[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
     Warning (13410): Pin "disp1[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp2[0]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp2[1]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp2[2]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp2[3]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp2[4]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp2[5]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp2[6]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
     Warning (13410): Pin "disp2[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp3[0]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp3[1]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp3[2]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp3[3]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp3[4]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp3[5]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
-    Warning (13410): Pin "disp3[6]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
     Warning (13410): Pin "disp3[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v Line: 4
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 146 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 86 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Mon Mar 10 18:30:32 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 141 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Tue Mar 11 17:01:59 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 

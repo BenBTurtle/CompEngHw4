@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Mar 10 18:30:32 2025
+Analysis & Synthesis Status : Successful - Tue Mar 11 17:01:59 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Alg2
 Top-level Entity Name : Alg2
 Family : MAX 10
-Total logic elements : 86
-    Total combinational functions : 62
-    Dedicated logic registers : 56
-Total registers : 56
+Total logic elements : 141
+    Total combinational functions : 109
+    Dedicated logic registers : 88
+Total registers : 88
 Total pins : 60
 Total virtual pins : 0
 Total memory bits : 0
