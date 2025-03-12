@@ -13,6 +13,7 @@ initial begin //set initial state
 	c = 8;
 	a = 0;
 	b = 0;
+	result = 0;
 end
 
 always @(posedge clk) begin //posedge to prevent clock related computation errors

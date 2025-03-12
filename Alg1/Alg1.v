@@ -3,14 +3,14 @@ input [7:0] currIn, //32 bit inputs and outputs for testing
 output [15:0] result,
 output [7:0] disp0, disp1, disp2, disp3);
 
-
+//registers for storing intermediary values
 reg [15:0] a;
 reg [15:0] b;
 
-initial begin
+initial begin 
 	a = 0;
 	b = 0;
-	//result = 0;
+
 end
 
 always @(posedge clk) begin
@@ -54,8 +54,9 @@ initial begin
 	load = 1; set = 1; aOrb = 1; currIn = 23; #8; //putting the value 23 into B
 	load = 1; set = 0; aOrb = 1; currIn = 23; #8; //button press and switch set to set B as 23
 	
-	load = 0; set = 1; aOrb = 1; currIn = 23; #100; //executing multiplication instruction
-	$stop; //end simulation
+	load = 0; set = 1; aOrb = 1; currIn = 23; #8; //executing multiplication instruction
+	load = 1; set = 1; aOrb = 1; currIn = 23; #100; //waiting for instruction to complete
+	$stop; //end simulation with completed instruction
 	 
 end
 

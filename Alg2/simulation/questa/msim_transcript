@@ -24,20 +24,65 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2 {C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2 {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:57:07 on Mar 11,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2" C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v 
+# Start time: 23:16:24 on Mar 11,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v 
 # -- Compiling module Alg2
-# ** Error: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v(2): (vlog-2730) Undefined variable: 'size'.
-# ** Error (suppressible): C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v(2): (vlog-2388) 'currIn' already declared in this scope (Alg2) at C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v(2).
-# ** Error: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v(6): (vlog-13282) 'size' already declared in this scope.
-# ** Error: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v(2): (vlog-13294) Identifier must be declared with a port mode: currIn.
 # -- Compiling module algorithmTB
-# End time: 16:57:08 on Mar 11,2025, Elapsed time: 0:00:01
-# Errors: 4, Warnings: 0
-# ** Error: c:/intelfpga_lite/23.1std/questa_fse/win64/vlog failed.
-# Error in macro ./Alg2_run_msim_rtl_verilog.do line 8
-# c:/intelfpga_lite/23.1std/questa_fse/win64/vlog failed.
-#     while executing
-# "vlog -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2 {C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/C..."
+# 
+# Top level modules:
+# 	algorithmTB
+# End time: 23:16:24 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2 {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:16:25 on Mar 11,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v 
+# -- Compiling module mul2
+# 
+# Top level modules:
+# 	mul2
+# End time: 23:16:25 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2 {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/hexSevenSegmentDisplayDecoder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 23:16:25 on Mar 11,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/hexSevenSegmentDisplayDecoder.v 
+# -- Compiling module hexSevenSegmentDecoder
+# 
+# Top level modules:
+# 	hexSevenSegmentDecoder
+# End time: 23:16:25 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -voptargs=+acc work.algorithmTB
+# vsim -voptargs="+acc" work.algorithmTB 
+# Start time: 23:16:32 on Mar 11,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.algorithmTB(fast)
+# Loading work.Alg2(fast)
+# Loading work.mul2(fast)
+# Loading work.hexSevenSegmentDecoder(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'aIn'. The port definition is at: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /algorithmTB/DUT/mult File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'bIn'. The port definition is at: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /algorithmTB/DUT/mult File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v Line: 23
+add wave -position end  sim:/algorithmTB/clk
+add wave -position end  sim:/algorithmTB/load
+add wave -position end  sim:/algorithmTB/aOrb
+add wave -position end  sim:/algorithmTB/set
+add wave -position end  sim:/algorithmTB/currIn
+add wave -position end  sim:/algorithmTB/result
+add wave -position end  sim:/algorithmTB/disp0
+add wave -position end  sim:/algorithmTB/disp1
+add wave -position end  sim:/algorithmTB/disp2
+add wave -position end  sim:/algorithmTB/disp3
+run -all
+# ** Note: $stop    : C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v(59)
+#    Time: 150 ns  Iteration: 0  Instance: /algorithmTB
+# Break in Module algorithmTB at C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v line 59
+# End time: 23:24:10 on Mar 11,2025, Elapsed time: 0:07:38
+# Errors: 0, Warnings: 3

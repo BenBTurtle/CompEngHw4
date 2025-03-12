@@ -54,8 +54,9 @@ initial begin
 	load = 1; set = 1; aOrb = 1; currIn = 23; #8; //putting the value 23 into B
 	load = 1; set = 0; aOrb = 1; currIn = 23; #8; //button press and switch set to set B as 23
 	
-	load = 0; set = 1; aOrb = 1; currIn = 23; #100; //executing multiplication instruction
-	$stop; //end simulation
+	load = 0; set = 1; aOrb = 1; currIn = 23; #8; //executing multiplication instruction
+	load = 1; set = 1; aOrb = 1; currIn = 23; #100; //waiting for instruction to complete
+	$stop; //end simulation with completed instruction
 	 
 end
 

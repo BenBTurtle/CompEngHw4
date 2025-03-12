@@ -24,41 +24,42 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1 {C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1 {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:14:27 on Mar 11,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1" C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v 
+# Start time: 22:33:46 on Mar 11,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v 
 # -- Compiling module Alg1
 # -- Compiling module algorithmTB
 # 
 # Top level modules:
 # 	algorithmTB
-# End time: 16:14:27 on Mar 11,2025, Elapsed time: 0:00:00
+# End time: 22:33:47 on Mar 11,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1 {C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1 {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/hexSevenSegmentDisplayDecoder.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:14:27 on Mar 11,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1" C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v 
+# Start time: 22:33:47 on Mar 11,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/hexSevenSegmentDisplayDecoder.v 
 # -- Compiling module hexSevenSegmentDecoder
 # 
 # Top level modules:
 # 	hexSevenSegmentDecoder
-# End time: 16:14:27 on Mar 11,2025, Elapsed time: 0:00:00
+# End time: 22:33:47 on Mar 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1 {C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1 {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 16:14:27 on Mar 11,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1" C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v 
+# Start time: 22:33:47 on Mar 11,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v 
 # -- Compiling module mul1
+# -- Compiling module multiplierTB
 # 
 # Top level modules:
-# 	mul1
-# End time: 16:14:27 on Mar 11,2025, Elapsed time: 0:00:00
+# 	multiplierTB
+# End time: 22:33:47 on Mar 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim -voptargs=+acc work.algorithmTB
 # vsim -voptargs="+acc" work.algorithmTB 
-# Start time: 16:15:38 on Mar 11,2025
+# Start time: 22:33:53 on Mar 11,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -66,10 +67,10 @@ vsim -voptargs=+acc work.algorithmTB
 # Loading work.Alg1(fast)
 # Loading work.mul1(fast)
 # Loading work.hexSevenSegmentDecoder(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'aIn'. The port definition is at: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /algorithmTB/DUT/mult File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 23
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'bIn'. The port definition is at: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /algorithmTB/DUT/mult File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'aIn'. The port definition is at: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /algorithmTB/DUT/mult File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'bIn'. The port definition is at: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /algorithmTB/DUT/mult File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 23
 add wave -position end  sim:/algorithmTB/clk
 add wave -position end  sim:/algorithmTB/load
 add wave -position end  sim:/algorithmTB/aOrb
@@ -81,8 +82,8 @@ add wave -position end  sim:/algorithmTB/disp1
 add wave -position end  sim:/algorithmTB/disp2
 add wave -position end  sim:/algorithmTB/disp3
 run -all
-# ** Note: $stop    : C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v(58)
-#    Time: 142 ns  Iteration: 0  Instance: /algorithmTB
-# Break in Module algorithmTB at C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v line 58
-# End time: 16:22:56 on Mar 11,2025, Elapsed time: 0:07:18
+# ** Note: $stop    : C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v(59)
+#    Time: 150 ns  Iteration: 0  Instance: /algorithmTB
+# Break in Module algorithmTB at C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v line 59
+# End time: 22:36:55 on Mar 11,2025, Elapsed time: 0:03:02
 # Errors: 0, Warnings: 3

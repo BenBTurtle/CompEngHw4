@@ -1,5 +1,5 @@
 Fitter report for Alg1
-Tue Mar 11 16:21:57 2025
+Tue Mar 11 22:32:59 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar 11 16:21:57 2025          ;
+; Fitter Status                      ; Successful - Tue Mar 11 22:32:59 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; Alg1                                           ;
 ; Top-level Entity Name              ; Alg1                                           ;
@@ -149,15 +149,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 32          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.06        ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.5%      ;
+;     Processors 2-16        ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -199,7 +199,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/output_files/Alg1.pin.
+The pin-out file can be found in C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/output_files/Alg1.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1087,98 +1087,98 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                             ;
-+------------------------------+-------------------+---------+
-; Source Pin / Fanout          ; Pad To Core Index ; Setting ;
-+------------------------------+-------------------+---------+
-; clk                          ;                   ;         ;
-; load                         ;                   ;         ;
-;      - mul1:mult|s[0]        ; 1                 ; 6       ;
-;      - mul1:mult|b[0]        ; 1                 ; 6       ;
-;      - mul1:mult|b[1]        ; 1                 ; 6       ;
-;      - mul1:mult|b[2]        ; 1                 ; 6       ;
-;      - mul1:mult|b[3]        ; 1                 ; 6       ;
-;      - mul1:mult|b[4]        ; 1                 ; 6       ;
-;      - mul1:mult|b[5]        ; 1                 ; 6       ;
-;      - mul1:mult|b[6]        ; 1                 ; 6       ;
-;      - mul1:mult|b[7]        ; 1                 ; 6       ;
-;      - mul1:mult|b[8]        ; 1                 ; 6       ;
-;      - mul1:mult|b[9]        ; 1                 ; 6       ;
-;      - mul1:mult|b[10]       ; 1                 ; 6       ;
-;      - mul1:mult|b[11]       ; 1                 ; 6       ;
-;      - mul1:mult|b[12]       ; 1                 ; 6       ;
-;      - mul1:mult|b[13]       ; 1                 ; 6       ;
-;      - mul1:mult|b[14]       ; 1                 ; 6       ;
-;      - mul1:mult|b[15]       ; 1                 ; 6       ;
-;      - mul1:mult|s[1]        ; 1                 ; 6       ;
-;      - mul1:mult|s[2]        ; 1                 ; 6       ;
-;      - mul1:mult|s[3]        ; 1                 ; 6       ;
-;      - mul1:mult|s[4]        ; 1                 ; 6       ;
-;      - mul1:mult|s[5]        ; 1                 ; 6       ;
-;      - mul1:mult|s[6]        ; 1                 ; 6       ;
-;      - mul1:mult|s[7]        ; 1                 ; 6       ;
-;      - mul1:mult|s[8]        ; 1                 ; 6       ;
-;      - mul1:mult|s[9]        ; 1                 ; 6       ;
-;      - mul1:mult|s[10]       ; 1                 ; 6       ;
-;      - mul1:mult|s[11]       ; 1                 ; 6       ;
-;      - mul1:mult|s[12]       ; 1                 ; 6       ;
-;      - mul1:mult|s[13]       ; 1                 ; 6       ;
-;      - mul1:mult|s[14]       ; 1                 ; 6       ;
-;      - mul1:mult|s[15]       ; 1                 ; 6       ;
-;      - mul1:mult|result[0]~0 ; 1                 ; 6       ;
-;      - mul1:mult|a[0]        ; 1                 ; 6       ;
-;      - mul1:mult|a[1]        ; 1                 ; 6       ;
-;      - mul1:mult|a[2]        ; 1                 ; 6       ;
-;      - mul1:mult|a[3]        ; 1                 ; 6       ;
-;      - mul1:mult|a[4]        ; 1                 ; 6       ;
-;      - mul1:mult|a[5]        ; 1                 ; 6       ;
-;      - mul1:mult|a[6]        ; 1                 ; 6       ;
-;      - mul1:mult|a[7]        ; 1                 ; 6       ;
-; currIn[6]                    ;                   ;         ;
-;      - b[6]                  ; 0                 ; 6       ;
-;      - a[6]                  ; 0                 ; 6       ;
-; aOrb                         ;                   ;         ;
-;      - b~0                   ; 1                 ; 6       ;
-;      - a~0                   ; 1                 ; 6       ;
-; set                          ;                   ;         ;
-;      - b~0                   ; 0                 ; 6       ;
-;      - a~0                   ; 0                 ; 6       ;
-; currIn[0]                    ;                   ;         ;
-;      - b[0]~feeder           ; 1                 ; 6       ;
-;      - a[0]~feeder           ; 1                 ; 6       ;
-; currIn[1]                    ;                   ;         ;
-;      - b[1]~feeder           ; 0                 ; 6       ;
-;      - a[1]~feeder           ; 0                 ; 6       ;
-; currIn[2]                    ;                   ;         ;
-;      - b[2]                  ; 0                 ; 6       ;
-;      - a[2]                  ; 0                 ; 6       ;
-; currIn[3]                    ;                   ;         ;
-;      - b[3]                  ; 1                 ; 6       ;
-;      - a[3]                  ; 1                 ; 6       ;
-; currIn[4]                    ;                   ;         ;
-;      - b[4]~feeder           ; 0                 ; 6       ;
-;      - a[4]~feeder           ; 0                 ; 6       ;
-; currIn[5]                    ;                   ;         ;
-;      - b[5]                  ; 1                 ; 6       ;
-;      - a[5]                  ; 1                 ; 6       ;
-; currIn[7]                    ;                   ;         ;
-;      - b[7]~feeder           ; 0                 ; 6       ;
-;      - a[7]~feeder           ; 0                 ; 6       ;
-+------------------------------+-------------------+---------+
++----------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                           ;
++----------------------------+-------------------+---------+
+; Source Pin / Fanout        ; Pad To Core Index ; Setting ;
++----------------------------+-------------------+---------+
+; clk                        ;                   ;         ;
+; load                       ;                   ;         ;
+;      - mul1:mult|s[0]      ; 1                 ; 6       ;
+;      - mul1:mult|b[0]      ; 1                 ; 6       ;
+;      - mul1:mult|b[1]      ; 1                 ; 6       ;
+;      - mul1:mult|b[2]      ; 1                 ; 6       ;
+;      - mul1:mult|b[3]      ; 1                 ; 6       ;
+;      - mul1:mult|b[4]      ; 1                 ; 6       ;
+;      - mul1:mult|b[5]      ; 1                 ; 6       ;
+;      - mul1:mult|b[6]      ; 1                 ; 6       ;
+;      - mul1:mult|b[7]      ; 1                 ; 6       ;
+;      - mul1:mult|b[8]      ; 1                 ; 6       ;
+;      - mul1:mult|b[9]      ; 1                 ; 6       ;
+;      - mul1:mult|b[10]     ; 1                 ; 6       ;
+;      - mul1:mult|b[11]     ; 1                 ; 6       ;
+;      - mul1:mult|b[12]     ; 1                 ; 6       ;
+;      - mul1:mult|b[13]     ; 1                 ; 6       ;
+;      - mul1:mult|b[14]     ; 1                 ; 6       ;
+;      - mul1:mult|b[15]     ; 1                 ; 6       ;
+;      - mul1:mult|s[1]      ; 1                 ; 6       ;
+;      - mul1:mult|s[2]      ; 1                 ; 6       ;
+;      - mul1:mult|s[3]      ; 1                 ; 6       ;
+;      - mul1:mult|s[4]      ; 1                 ; 6       ;
+;      - mul1:mult|s[5]      ; 1                 ; 6       ;
+;      - mul1:mult|s[6]      ; 1                 ; 6       ;
+;      - mul1:mult|s[7]      ; 1                 ; 6       ;
+;      - mul1:mult|s[8]      ; 1                 ; 6       ;
+;      - mul1:mult|s[9]      ; 1                 ; 6       ;
+;      - mul1:mult|s[10]     ; 1                 ; 6       ;
+;      - mul1:mult|s[11]     ; 1                 ; 6       ;
+;      - mul1:mult|s[12]     ; 1                 ; 6       ;
+;      - mul1:mult|s[13]     ; 1                 ; 6       ;
+;      - mul1:mult|s[14]     ; 1                 ; 6       ;
+;      - mul1:mult|s[15]     ; 1                 ; 6       ;
+;      - mul1:mult|rout[0]~0 ; 1                 ; 6       ;
+;      - mul1:mult|a[0]      ; 1                 ; 6       ;
+;      - mul1:mult|a[1]      ; 1                 ; 6       ;
+;      - mul1:mult|a[2]      ; 1                 ; 6       ;
+;      - mul1:mult|a[3]      ; 1                 ; 6       ;
+;      - mul1:mult|a[4]      ; 1                 ; 6       ;
+;      - mul1:mult|a[5]      ; 1                 ; 6       ;
+;      - mul1:mult|a[6]      ; 1                 ; 6       ;
+;      - mul1:mult|a[7]      ; 1                 ; 6       ;
+; currIn[6]                  ;                   ;         ;
+;      - b[6]                ; 0                 ; 6       ;
+;      - a[6]                ; 0                 ; 6       ;
+; aOrb                       ;                   ;         ;
+;      - b~0                 ; 1                 ; 6       ;
+;      - a~0                 ; 1                 ; 6       ;
+; set                        ;                   ;         ;
+;      - b~0                 ; 0                 ; 6       ;
+;      - a~0                 ; 0                 ; 6       ;
+; currIn[0]                  ;                   ;         ;
+;      - b[0]~feeder         ; 1                 ; 6       ;
+;      - a[0]~feeder         ; 1                 ; 6       ;
+; currIn[1]                  ;                   ;         ;
+;      - b[1]~feeder         ; 0                 ; 6       ;
+;      - a[1]~feeder         ; 0                 ; 6       ;
+; currIn[2]                  ;                   ;         ;
+;      - b[2]                ; 0                 ; 6       ;
+;      - a[2]                ; 0                 ; 6       ;
+; currIn[3]                  ;                   ;         ;
+;      - b[3]                ; 1                 ; 6       ;
+;      - a[3]                ; 1                 ; 6       ;
+; currIn[4]                  ;                   ;         ;
+;      - b[4]~feeder         ; 0                 ; 6       ;
+;      - a[4]~feeder         ; 0                 ; 6       ;
+; currIn[5]                  ;                   ;         ;
+;      - b[5]                ; 1                 ; 6       ;
+;      - a[5]                ; 1                 ; 6       ;
+; currIn[7]                  ;                   ;         ;
+;      - b[7]~feeder         ; 0                 ; 6       ;
+;      - a[7]~feeder         ; 0                 ; 6       ;
++----------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                             ;
-+-----------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; Name                  ; Location           ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; a~0                   ; LCCOMB_X63_Y50_N22 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; b~0                   ; LCCOMB_X63_Y50_N10 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; clk                   ; PIN_P11            ; 72      ; Clock                                 ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; load                  ; PIN_B8             ; 41      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; mul1:mult|result[0]~5 ; LCCOMB_X65_Y50_N10 ; 48      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-+-----------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                           ;
++---------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; Name                ; Location           ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; a~0                 ; LCCOMB_X63_Y50_N22 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; b~0                 ; LCCOMB_X63_Y50_N10 ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; clk                 ; PIN_P11            ; 72      ; Clock                                 ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; load                ; PIN_B8             ; 41      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; mul1:mult|rout[0]~5 ; LCCOMB_X65_Y50_N10 ; 48      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
++---------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1517,7 +1517,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 32 processors detected
 Info (119006): Selected device 10M50DAF484C7G for design "Alg1"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1557,7 +1557,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 1
+Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 1
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1576,7 +1576,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has 3.3V VCCIO pins. 14 total pin(s) used --  46 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 29 total pin(s) used --  23 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  32 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1588,37 +1588,37 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X56_Y44 to location X66_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 12 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 1
-    Info (169178): Pin load uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 1
-    Info (169178): Pin currIn[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-    Info (169178): Pin aOrb uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 1
-    Info (169178): Pin set uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 1
-    Info (169178): Pin currIn[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-    Info (169178): Pin currIn[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-    Info (169178): Pin currIn[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-    Info (169178): Pin currIn[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-    Info (169178): Pin currIn[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-    Info (169178): Pin currIn[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-    Info (169178): Pin currIn[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v Line: 2
-Info (144001): Generated suppressed messages file C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/output_files/Alg1.fit.smsg
+    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 1
+    Info (169178): Pin load uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 1
+    Info (169178): Pin currIn[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+    Info (169178): Pin aOrb uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 1
+    Info (169178): Pin set uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 1
+    Info (169178): Pin currIn[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+    Info (169178): Pin currIn[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+    Info (169178): Pin currIn[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+    Info (169178): Pin currIn[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+    Info (169178): Pin currIn[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+    Info (169178): Pin currIn[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+    Info (169178): Pin currIn[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v Line: 2
+Info (144001): Generated suppressed messages file C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/output_files/Alg1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5905 megabytes
-    Info: Processing ended: Tue Mar 11 16:21:57 2025
+    Info: Peak virtual memory: 6605 megabytes
+    Info: Processing ended: Tue Mar 11 22:33:00 2025
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/output_files/Alg1.fit.smsg.
+The suppressed messages can be found in C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/output_files/Alg1.fit.smsg.
 
 

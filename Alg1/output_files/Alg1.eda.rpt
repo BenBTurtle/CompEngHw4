@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Alg1
-Tue Mar 11 16:22:04 2025
+Tue Mar 11 22:33:07 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Mar 11 16:22:04 2025 ;
+; EDA Netlist Writer Status ; Successful - Tue Mar 11 22:33:07 2025 ;
 ; Revision Name             ; Alg1                                  ;
 ; Top-level Entity Name     ; Alg1                                  ;
 ; Family                    ; MAX 10                                ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                               ;
-+------------------------------------------------------------------------------------------+
-; Generated Files                                                                          ;
-+------------------------------------------------------------------------------------------+
-; C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/simulation/questa/Alg1.vo ;
-+------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                           ;
++------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                      ;
++------------------------------------------------------------------------------------------------------+
+; C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/simulation/questa/Alg1.vo ;
++------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Mar 11 16:22:04 2025
+    Info: Processing started: Tue Mar 11 22:33:07 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Alg1 -c Alg1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Alg1.vo in folder "C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/simulation/questa/" for EDA simulation tool
+Info (204019): Generated file Alg1.vo in folder "C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4647 megabytes
-    Info: Processing ended: Tue Mar 11 16:22:04 2025
+    Info: Peak virtual memory: 4648 megabytes
+    Info: Processing ended: Tue Mar 11 22:33:07 2025
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

@@ -10,12 +10,12 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/simulation/questa
+Z1 dC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/simulation/questa
 T_opt
-!s110 1741724139
-VdK^bJWRz70SS2@8bh1;WH0
+!s110 1741746834
+Vzo98QlkDan_Cld1amL@8R1
 04 11 4 work algorithmTB fast 0
-=1-e4a8dff707cd-67d099ea-2eb-3860
+=1-9c6b0004a85d-67d0f292-114-874
 R0
 !s12b OEM100
 !s124 OEM10U7 
@@ -24,15 +24,15 @@ Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 vAlg1
-Z3 2C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v
-Z4 !s110 1741724067
+Z3 2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v
+Z4 !s110 1741746827
 !i10b 1
 !s100 ;T[T]m]?E<D[nTWc8h`zE1
-IGMj>3a0Z4<c@00o]21N9J0
+IP^37:aITJ2YWMQJLLJoP`3
 R1
-Z5 w1741723796
-Z6 8C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v
-Z7 FC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v
+Z5 w1741746764
+Z6 8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v
+Z7 FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v
 !i122 0
 Z8 L0 1 30
 Z9 VDg1SIo80bB@j0V0VzS_@n1
@@ -40,26 +40,26 @@ Z10 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z11 !s108 1741724067.000000
-Z12 !s107 C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v|
-Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1|C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/Alg1.v|
+Z11 !s108 1741746826.000000
+Z12 !s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/Alg1.v|
 !i113 0
 Z14 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z15 !s92 -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 -vlog01compat -work work {+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 n@alg1
 valgorithmTB
 R3
 R4
 !i10b 1
-!s100 W=@<^W2NLbEUmfNWUY0T51
-IAm:`gChG2;@8g3dQz3V6h0
+!s100 [@eSfdLY7[6FbB95og5773
+I5@>Gf<BXY3>0h_hR8_6`M1
 R1
 R5
 R6
 R7
 !i122 0
-L0 33 30
+L0 33 31
 R9
 R10
 r1
@@ -74,15 +74,15 @@ R15
 R2
 nalgorithm@t@b
 vhexSevenSegmentDecoder
-2C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v
+2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/hexSevenSegmentDisplayDecoder.v
 R4
 !i10b 1
 !s100 =EKj?dQS?@zAc0_kBU5jg3
-I5?5GC5<]@:cH9Jd?oJ`kV2
+In2TmaYm4lc0YOAafD`WDm3
 R1
-w1741637029
-8C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v
-FC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v
+w1741715664
+8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/hexSevenSegmentDisplayDecoder.v
+FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/hexSevenSegmentDisplayDecoder.v
 !i122 1
 R8
 R9
@@ -90,35 +90,60 @@ R10
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1|C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/hexSevenSegmentDisplayDecoder.v|
+Z16 !s108 1741746827.000000
+!s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/hexSevenSegmentDisplayDecoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/hexSevenSegmentDisplayDecoder.v|
 !i113 0
 R14
 R15
 R2
 nhex@seven@segment@decoder
 vmul1
-2C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v
+Z17 2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v
 R4
 !i10b 1
-!s100 P^FB`VR81V5k9;7CbYFh;2
-IN8M^L2ZVU`>?6_<idIM8m2
+!s100 in>MIUYQkeoAV5MC>0I;<1
+Iga4_`Sl:]:f`FVKf^^0A`0
 R1
-w1741723797
-8C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v
-FC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v
+Z18 w1741740627
+Z19 8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v
+Z20 FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v
 !i122 2
-L0 1 32
+L0 1 36
 R9
 R10
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1|C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg1/multiply1.v|
+R16
+Z21 !s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v|
+Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg1/multiply1.v|
 !i113 0
 R14
 R15
 R2
+vmultiplierTB
+R17
+R4
+!i10b 1
+!s100 V4OenbV[zRB06I>B8WRN73
+I00MbSR17B7K>=kFeF_^@02
+R1
+R18
+R19
+R20
+!i122 2
+L0 41 21
+R9
+R10
+r1
+!s85 0
+31
+R16
+R21
+R22
+!i113 0
+R14
+R15
+R2
+nmultiplier@t@b

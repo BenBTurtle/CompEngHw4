@@ -1,34 +1,124 @@
 m255
 K4
 z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/simulation/questa
-valgorithmTB
-!s110 1741726628
-!i10b 1
-!s100 WVV?P;Ko3bOI6=iY<85T>3
-IXhMj4m0o`VC6P_YXf]B_`0
+Z1 dC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/simulation/questa
+T_opt
+!s110 1741749393
+VNRU5EUZXXboVW[ZY2:YA90
+04 11 4 work algorithmTB fast 0
+=1-9c6b0004a85d-67d0fc91-159-3404
 R0
-w1741726589
-8C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v
-FC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v
+!s12b OEM100
+!s124 OEM10U7 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vAlg2
+Z3 2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v
+Z4 !s110 1741749384
+!i10b 1
+!s100 ZlkNm8iiNdiT<Kef]MQPi0
+IF4X3JkZLACoWdC[1Q:^PI1
+R1
+Z5 w1741742726
+Z6 8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v
+Z7 FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v
 !i122 0
-L0 35 30
-VDg1SIo80bB@j0V0VzS_@n1
-OL;L;2023.3;77
+L0 1 29
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2023.3;77
 r1
 !s85 0
 31
-!s108 1741726627.000000
-!s107 C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2|C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2/Alg2.v|
+Z10 !s108 1741749384.000000
+Z11 !s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/Alg2.v|
 !i113 0
-o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-!s92 -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/CompEngHw4/Alg2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-tCvgOpt 0
+Z13 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 -vlog01compat -work work {+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@alg2
+valgorithmTB
+R3
+R4
+!i10b 1
+!s100 m:@>d76^ccWCZ3?^@N=nb0
+I>]D`:[]aIQaQOFfM?AQa?3
+R1
+R5
+R6
+R7
+!i122 0
+L0 33 31
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R2
 nalgorithm@t@b
+vhexSevenSegmentDecoder
+2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/hexSevenSegmentDisplayDecoder.v
+Z15 !s110 1741749385
+!i10b 1
+!s100 =EKj?dQS?@zAc0_kBU5jg3
+I>2H8J8GKYOI7aLFWMT[e=3
+R1
+w1741715664
+8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/hexSevenSegmentDisplayDecoder.v
+FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/hexSevenSegmentDisplayDecoder.v
+!i122 2
+L0 1 30
+R8
+R9
+r1
+!s85 0
+31
+Z16 !s108 1741749385.000000
+!s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/hexSevenSegmentDisplayDecoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/hexSevenSegmentDisplayDecoder.v|
+!i113 0
+R13
+R14
+R2
+nhex@seven@segment@decoder
+vmul2
+2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v
+R15
+!i10b 1
+!s100 F^aPaAl5K50mdimAC;4Vd3
+IL[NW5HhfmmHk801MofWcX2
+R1
+w1741743165
+8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v
+FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v
+!i122 1
+L0 1 43
+R8
+R9
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Homework_4/Alg2/multiplyAlg2.v|
+!i113 0
+R13
+R14
+R2
